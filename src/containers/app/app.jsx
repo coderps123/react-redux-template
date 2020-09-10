@@ -60,6 +60,11 @@ class App extends React.Component {
   }
 }
 export default connect(
-  state => ({comments: state}),
+  state => {
+    return {
+      comments: state.comments,
+      xxxx: state.xxxx
+    }
+  },
   {add, del, getComments}
 )(App)
